@@ -1,8 +1,8 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import * as createLogger from 'redux-logger'
 import createSagaMiddleware from 'redux-saga'
-import { browserHistory } from 'react-router';
-import { routerMiddleware } from 'react-router-redux';
+import { browserHistory } from 'react-router'
+import { routerMiddleware } from 'react-router-redux'
 
 import rootReducer from './reducers/root_reducer'
 

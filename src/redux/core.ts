@@ -15,3 +15,7 @@ export const AppState = {
 }
 
 export const INITIAL_STATE = AppState
+
+export function updateGreeting(value: string): Hello {
+    return {greeting: value}
+}

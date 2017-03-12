@@ -1,14 +1,17 @@
 import { combineReducers } from 'redux'
-import { INITIAL_STATE } from '../core'
+import { INITIAL_STATE, updateGreeting } from '../core'
 import { routerReducer } from 'react-router-redux'
 
 type HelloAction = {
-    type: ""
+    type: "SET_GREETING",
+    greeting: string,
 }
 
 // just for hello world
 function hello(state = INITIAL_STATE.hello, action: HelloAction) {
     switch(action.type) {
+        case 'SET_GREETING':
+            return updateGreeting(action.greeting)
         default:
             return state
     }
